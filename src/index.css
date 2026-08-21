@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Playfair Display', serif;
+  --font-cursive: 'Great Vibes', cursive;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --color-gold-400: #f59e0b;
+  --color-gold-500: #d97706;
+  --color-rose-gold: #e8b4b8;
+  --color-dark-bg: #0f172a;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: #0b1120;
+  color: #f8fafc;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-cursive {
+  font-family: var(--font-cursive);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Luxury Golden Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-rose {
+  background: linear-gradient(135deg, #fbcfe8 0%, #f472b6 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.glass-card-gold {
+  background: rgba(30, 41, 59, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Golden Border Glow */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
+}
+
+/* Floating Music Vinyl Animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Falling Petals Background Animation */
+@keyframes float-petal {
+  0% {
+    transform: translateY(-10vh) rotate(0deg) translateX(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(45vh) rotate(180deg) translateX(25px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) translateX(-25px);
+    opacity: 0.2;
+  }
+}
+
+.petal-particle {
+  position: absolute;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(251, 207, 232, 0.4), rgba(244, 114, 182, 0.2));
+  border-radius: 50% 0 50% 50%;
+  animation: float-petal 14s linear infinite;
+}
+
+/* Shimmer Highlight Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Custom Toast Animation */
+@keyframes slide-in-top {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in-top 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
